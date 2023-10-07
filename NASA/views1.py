@@ -8,7 +8,7 @@ import tensorflow as tf
 import numpy as np
 
 # Load the TFLite model
-tflite_model_path = 'path/to/your/quantized_model.tflite'
+tflite_model_path = 'quantized_model.tflite'
 interpreter = tf.lite.Interpreter(model_path=tflite_model_path)
 interpreter.allocate_tensors()
 
