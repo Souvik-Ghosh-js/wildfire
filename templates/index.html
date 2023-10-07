@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>WILDFIRE</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/css/responsive.css" rel="stylesheet" />
+</head>
+<style>
+  .boxx{
+position: absolute;
+top: 150px;
+right: 100px;
+}
+.boxx h3{
+color: #000;
+padding: 20px;
+background-color: #fff;
+border-radius: 20px;
+}
+.boxx h2{
+color: red;
+padding: 20px;
+background-color: #fff;
+border-radius: 20px;
+}
+</style>
+<body>
+  <div class="hero_area">
+    <video id="myvideo" autoplay muted loop>
+      <source src="static/images/bg.mp4" type="video/mp4" >
+    </video>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img src="static/images/logo.png" alt="" />
+            <span>
+              BLACKHOLE BANDITS
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sec01"> Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sec02">About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sec03"> Contact</a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="">
+                <span>
+                  Login
+                </span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="custom_menu-btn ">
+              <button>
+                <span class=" s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+    </header>
+    <div id="top"></div>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-5 offset-md-1">
+                  <div class="detail-box">
+                    <h1>
+                      NASA SPACE <br>
+                      HACKATHON<br>
+                      Here
+                    </h1>
+                    <p>
+                      It is a long established fact that a reader will be distracted by
+                      the readable content of a page
+                    </p>
+                    <div class="popup1" id="popup">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo similique magni ipsa recusandae ad repellat neque omnis saepe perspiciatis illum cum error, modi, est, debitis iste expedita nisi voluptatum temporibus?</div>
+                    <div class="popup2" id="popup2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates reprehenderit quos vel cupiditate quia! Distinctio id molestias doloribus eum temporibus sed suscipit at. Quis, quam facilis aliquid aperiam animi sit!</div>
+                    <div class="btn-box">
+                      <a href="" class="btn-1" onmouseover="showPopup()" onmouseout="hidePopup()">
+                        Know More
+                      </a>
+                      <a href="" class="btn-2" onmouseover="showPopup1()" onmouseout="hidePopup1()">
+                        Our Work
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             <div class="boxx">
+    {% if predictions %}
+        <h3>Model predicted Output is <b style="font-weight:800">{{ predictions }}</b>, <br> with <b style="font-weight:800">{{ accuracy }}%</b> accuracy</h3>
+    {% elif error %}
+        <h2><b style="font-weight:600">{{ error }}</b></h2>
+    {% endif %}
+</div>
+
+            </div>
+            <script>
+              function showPopup() {
+    const popup = document.getElementById("popup");
+    popup.style.display = "block";
+}
+
+function hidePopup() {
+    const popup = document.getElementById("popup");
+    popup.style.display = "none";
+}
+</script>
+  <script>
+function showPopup1() {
+    const popup = document.getElementById("popup2");
+    popup.style.display = "block";
+}
+
+function hidePopup1() {
+    const popup = document.getElementById("popup2");
+    popup.style.display = "none";
+}
+            </script>
+    </section>
+    <div id="sec01" style="padding-top: 80px;"></div> 
+    <!-- end slider section -->
+  </div>
+  <section class="category_section layout_padding">
+    <div class="container">
+      <div class="heading_container" style="position: relative; left: 42%">
+        <h2>
+          Our Model
+        </h2>
+      </div>'
+    <form method="post" action="/predict" enctype="multipart/form-data">
+  {% csrf_token %}
+      <div class="file-wrapper">
+        <input type="file" name="upload_img" accept="image/*" />
+        <div class="close-btn">×</div>
+      </div>
+      <button class="botao">
+        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mysvg"><g id="SVGRepo_bgCarrier" stroke-width="0">
+          </g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+             <g id="Interface / Download"> 
+             <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#f1f1f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+             </path>
+          </g> </g>
+        </svg>
+        <span class="texto">Submit</span>
+      </button>
+    
+    </form>
+      </div>
+  </section>
+
+<Script>
+$('input[name="upload-img"]').on('change', function(){
+  readURL(this, $('.file-wrapper'));  //Change the image
+});
+
+$('.close-btn').on('click', function(){ //Unset the image
+   let file = $('input[name="upload-img"]');
+   $('.file-wrapper').css('background-image', 'unset');
+   $('.file-wrapper').removeClass('file-set');
+   file.replaceWith( file = file.clone( true ) );
+});
+
+//FILE
+function readURL(input, obj){
+  if(input.files && input.files[0]){
+    var reader = new FileReader();
+    reader.onload = function(e){
+      obj.css('background-image', 'url('+e.target.result+')');
+      obj.addClass('file-set');
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+};
+</Script>
+  <!-- end category section -->
+
+  <!-- about section -->
+  <div id="sec02"></div>
+  <section class="about_section layout_padding">
+    <div class="heading_container" style="position: relative; left: 45%">
+      <h2>
+       About Us
+      </h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="card">
+          <img src="static/images/team-1.jpg">
+          <div class="content">
+            <p class="title">Subhodeep Ghosh<br><span> AI Engineer</span></p>
+            <ul class="sci">
+              <li>
+                <a href="#">
+                  <svg class="fa-brands fa-facebook" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+                </a>
+              </li>
+        
+              <li>
+                <a href="#">
+                  <svg class="fa-brands fa-twitter" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+                </a>
+              </li>
+        
+              <li>
+                <a href="#">
+                  <svg class="fa-brands fa-linkedin-in" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+                </a>
+              </li>
+        
+              <li>
+                <a href="#">
+                  <svg class="fa-brands fa-instagram" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <img src="static/images/team-2.jpg">
+          <div class="content">
+            <p class="title">Rafjjkumar Maity<br><span>AI Engineer</span></p>
+            <ul class="sci">
+              <li>
+                <a href="#">
+                  <svg class="fa-brands fa-facebook" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+                </a>
+              </li>
+        
+              <li>
+                <a href="#">
+                  <svg class="fa-brands fa-twitter" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+                </a>
+              </li>
+        
+              <li>
+                <a href="#">
+                  <svg class="fa-brands fa-linkedin-in" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+                </a>
+              </li>
+        
+              <li>
+                <a href="#">
+                  <svg class="fa-brands fa-instagram" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="sec03"></div>
+  <section class="freelance_section ">
+      <div class="container-fluid">
+        <div class="heading_container" style="position: relative; left: 45%">
+          <h2>
+           Contact Us
+          </h2>
+        </div>
+        <div class="row">
+          <img src="static/images/nbg.gif">
+          <form class="form">
+            <div class="title" style="color:black; font-size: 20px; font-weight: 700;">Contact Us</div>
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>first name</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>last name</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input">
+                <span>email</span>
+            </label> 
+                
+            <label>
+                <input required="" type="tel" placeholder="" class="input">
+                <span>contact number</span>
+            </label>
+            <label>
+                <textarea required="" rows="3" placeholder="" class="input01"></textarea>
+                <span>message</span>
+            </label>
+            
+            <button class="fancy" href="#">
+              <span class="top-key"></span>
+              <span class="text">submit</span>
+              <span class="bottom-key-1"></span>
+              <span class="bottom-key-2"></span>
+            </button>
+        </form>
+        </div>
+      </div>
+
+
+  </section>
+  <footer class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDate"></span> All Rights Reserved
+      </p>
+    </div>
+  </footer>
+  <!-- end  footer section -->
+
+
+  <script src="static/js/jquery-3.4.1.min.js"></script>
+  <script src="static/js/bootstrap.js"></script>
+  <script src="static/js/custom.js"></script>
+
+
+</body>
+</body>
+
+</html>
