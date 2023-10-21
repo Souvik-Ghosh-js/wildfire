@@ -14,11 +14,9 @@ Our project introduces a comprehensive wildfire detection and response system th
 
 3. **Alert Prioritization**: The system prioritizes alerts based on the scale and potential danger, ensuring higher-level authorities are alerted when necessary, streamlining response efforts.
 
-4. **Fire Spread Prediction**: Utilizing advanced algorithms, our system predicts the spread pattern of wildfires, critical for the safety of firefighting teams and effective containment efforts.
+4. **Communication and Awareness**: Our system facilitates rapid communication with relevant authorities, firefighting teams, and volunteers, leveraging social media and media channels for faster response and evacuation.
 
-5. **Communication and Awareness**: Our system facilitates rapid communication with relevant authorities, firefighting teams, and volunteers, leveraging social media and media channels for faster response and evacuation.
-
-6. **Fund-To-Go**: Integrated is the "Fund-To-Go" feature, connecting donors and NGOs with affected areas, simplifying financial aid and support for post-fire recovery efforts.
+5. **Fund-To-Go**: Integrated is the "Fund-To-Go" feature, connecting donors and NGOs with affected areas, simplifying financial aid and support for post-fire recovery efforts.
 
 ## Why It's Important
 
