@@ -34,19 +34,6 @@ Our project holds immense significance for several reasons:
 
 ## Project Details
 
-### How It Works
-
-1. **Wildfire Detection**: Our system uses machine learning models, including TensorFlow, to analyze real-time satellite imagery, achieving a remarkable 98% accuracy in wildfire detection.
-
-2. **Scale and Escalation Prediction**: The AI system factors in weather conditions, geographical data, and historical fire behavior to estimate the scale and potential escalation level of detected wildfires.
-
-3. **Alert Prioritization**: Alerts are prioritized based on the scale and danger level, notifying authorities accordingly for efficient resource allocation.
-
-4. **Fire Spread Prediction**: Advanced algorithms predict the wildfire's spread pattern, aiding firefighting teams in strategic planning for containment.
-
-5. **Communication and Awareness**: The system communicates rapidly with relevant authorities, firefighting teams, and volunteers, facilitating a swift and coordinated response. It also leverages social media and media channels to raise awareness about ongoing wildfires.
-
-6. **Fund-To-Go**: Integrated is the "Fund-To-Go" feature, connecting donors and NGOs with wildfire-affected areas, expediting financial aid and support for post-fire recovery efforts.
 
 ### Goals and Achievements
 
@@ -67,8 +54,4 @@ Our project aims to:
 
 By combining these tools and technologies, we've created a powerful and comprehensive solution addressing the critical issue of wildfire detection and prevention. Together, we can significantly reduce the devastating impact of wildfires on communities and the environment.
 
-Feel free to explore our codebase and contribute to this vital initiative. Thank you for your interest and support! 🌍🔥
-
----
-
-*Note: Replace the placeholders such as `<Project Name>` and `<Your Name>` with actual project details before publishing the README file.*
+Feel free to explore our codebase and contribute to this vital initiative. Thank you for your interest and support!
